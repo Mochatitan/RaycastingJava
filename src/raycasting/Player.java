@@ -1,4 +1,6 @@
-  import java.awt.event.KeyEvent;
+package raycasting;
+
+import java.awt.event.KeyEvent;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
