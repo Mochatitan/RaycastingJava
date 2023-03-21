@@ -1,3 +1,5 @@
+package raycasting;
+
 import javax.swing.*;
 
 class App {
