@@ -1,5 +1,7 @@
 package raycasting;
 
+import java.util.Timer;
+
 public class Board{
 //Constants
   //raycasting
@@ -9,15 +11,15 @@ public class Board{
   public static final int MAP_HEIGHT = 24;
   public static final int MAP_WIDTH = 24;
   public static final int SCREEN_HEIGHT = 480;
-  public static final int SCREEN_WIDTH = 640;
-  
+  public static final int SCREEN_WIDTH = 480;
+  public static final int TILE_SIZE = 20;
   //game structure
     //delay between each tick in ms
     public static final int DELAY = 15;
     // keep a reference to the timer object that triggers actionPerformed() 
     private Timer timer;
   
-public static final int worldMap[MAP_WIDTH][MAP_HEIGHT]=
+public static final int[MAP_HEIGHT][MAP_WIDTH] worldMap =
 {
   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
@@ -118,8 +120,8 @@ public Board(){
     private void drawRaycast(Graphics g) {
         // draw a checkered background
         g.setColor(new Color(214, 214, 214));
-        for (int row = 0; row < ROWS; row++) {
-            for (int col = 0; col < COLUMNS; col++) {
+        for (int row = 0; row < MAP_HEIGHT; row++) {
+            for (int col = 0; col < MAP_WIDTH; col++) {
                 
                
               
